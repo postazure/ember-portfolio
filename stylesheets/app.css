@@ -1,0 +1,46 @@
+body {
+  padding: 20px;
+}
+
+#container {
+  width:90%;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+#content-panel > div {
+  height: 75vh;
+}
+
+.active.item {
+  pointer-events: none;
+}
+/*
+#content-panel {
+  height: 80vh;
+}*/
+
+i.down {
+  cursor: pointer;
+}
+
+.img-caption {
+  position: realtive;
+  overflow:hidden;
+}
+.img-caption p{
+  position:absolute;
+  opacity: 0.9;
+  bottom: 0px;
+  right: 0px;
+}
+
+#medium-container {
+  height: 320px;
+  overflow: scroll;
+}
+
+#medium-frame {
+  position: absolute;
+top: -250px;
+}
