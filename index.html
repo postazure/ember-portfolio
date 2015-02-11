@@ -47,11 +47,9 @@
                   {{#link-to "index" classNames="item"}}
                     <i class="user icon"></i> About
                   {{/link-to}}
-
                   {{#link-to "projects" classNames="item"}}
                     <i class="folder icon"></i> Projects
                   {{/link-to}}
-
                   {{#link-to "games" classNames="video-load item"}}
                     <i class="game icon"></i> Games
                   {{/link-to}}
@@ -101,84 +99,52 @@
             <div class="ui fluid card">
               <div class="content">
                 <div class="header">
-                  <a href="https://shielded-beach-1758.herokuapp.com/" target="_blank">
-                    Order Now
-                  </a>
+                  <a href="https://shielded-beach-1758.herokuapp.com/" target="_blank">{{project1_name}}</a>
                 </div>
-                <div class="meta">
-                  Ruby on Rails
-                </div>
+                <div class="meta">{{project1_stack}}</div>
                 <div class="description">
-                  <p>
-                    Find the restaurant and service that can make a delivery to you
-                    in San Francisco, even at dinner time.
-                  </p>
-                  <p>
-                    When you make it home from a long day of work and just want to
-                    decompress, the last thing you want to have to deal with is
-                    making dinner. You should probably place a delivery order.
-                    The only problem is your hungry now and all the restaurants you
-                    normaly get delivery from are posting an hour and a half wait.
-                  </p>
-                  <p>
-                    Order Now to the rescue. Search for the kind of food you want
-                    and this app will find the fastest way to get it to you.
-                  </p>
+                  {{#each paragraph in project1_description}}
+                    <p>{{paragraph}}</p>
+                  {{/each}}
                   <div class="ui divider"></div>
-                  <div class="ui label">Multiple Search Providers</div>
-                  <div class="ui label">Real Time Updates</div>
-                  <div class="ui label">Custom Sorting Algorithm</div>
+                  {{#each tag in project1_tags}}
+                    <div class="ui label">{{tag}}</div>
+                  {{/each}}
                 </div>
               </div>
               <div class="extra content">
                 <a class="right floated" href="https://github.com/postazure/Order-Now-App" target="_blank">
-                  <i class="user large github icon"></i>
-                  Repo
+                  <i class="user large github icon"></i>Repo
                 </a>
                 <a href="https://shielded-beach-1758.herokuapp.com/" target="_blank">
-                  <i class="user large desktop icon"></i>
-                  Launch App
+                  <i class="user large desktop icon"></i>Launch App
                 </a>
               </div>
             </div>
-
           </div>
           <div class="column">
             <div class="ui fluid card">
               <div class="content">
                 <div class="header">
-                  <a href="https://postazure-secret-santa.herokuapp.com/users/sign_in" target="_blank">
-                    Secret Santa Selector
-                  </a>
+                  <a href="https://postazure-secret-santa.herokuapp.com/users/sign_in" target="_blank">{{project2_name}}</a>
                 </div>
-                <div class="meta">
-                  Ruby on Rails
-                </div>
+                <div class="meta">{{project2_stack}}</div>
                 <div class="description">
-                  <p>
-                    Make that secret santa drawing go by without a hitch.
-                  </p>
-                  <p>
-                    Each year our family draws names out of a hat, but you're
-                    not allowed to draw yourself or your spouse. With three
-                    couples, the odds are pretty good you'll have to draw again...
-                    and again... and again. Enter Secret Santa Selector, a simple
-                    web app to perform the drawing and email each member secretly
-                    so that even the organizer can join in the suprise.
-                  </p>
+                  {{#each paragraph in project2_description}}
+                    <p>{{paragraph}}</p>
+                  {{/each}}
                   <div class="ui divider"></div>
-                  <div class="ui label">User Authentication and Authorization</div>
-                  <div class="ui label">SendGrid Api</div>
+                  {{#each tag in project2_tags}}
+                    <div class="ui label">{{tag}}</div>
+                  {{/each}}
                 </div>
               </div>
               <div class="extra content">
                 <a class="right floated" href="https://github.com/postazure/Secret_Santa_Stocking_Selector" target="_blank">
-                  <i class="user large github icon"></i>
-                  Repo
+                  <i class="user large github icon"></i>Repo
                 </a>
                 <a href="https://postazure-secret-santa.herokuapp.com/users/sign_in" target="_blank">
-                  <i class="user large desktop icon"></i>
-                  Launch App
+                  <i class="user large desktop icon"></i>Launch App
                 </a>
               </div>
             </div>
@@ -187,20 +153,17 @@
             <div class="ui fluid card">
               <div class="content">
                 <div class="header">
-                  <a href="https://glacial-castle-8303.herokuapp.com/" target="_blank">
-                    Reddit Clone
-                  </a>
+                  <a href="https://glacial-castle-8303.herokuapp.com/" target="_blank">{{project3_name}}</a>
                 </div>
-                <div class="meta">
-                  Ruby on Rails
-                </div>
+                <div class="meta">{{project3_stack}}</div>
                 <div class="description">
-                  <p>
-                    A simple recreation of forum board. Post content or comment on previous posts.
-                  </p>
+                  {{#each paragraph in project3_description}}
+                    <p>{{paragraph}}</p>
+                  {{/each}}
                   <div class="ui divider"></div>
-                  <div class="ui label">User Authentication and Authorization</div>
-                  <div class="ui label">Bootstrap</div>
+                  {{#each tag in project3_tags}}
+                    <div class="ui label">{{tag}}</div>
+                  {{/each}}
                 </div>
               </div>
               <div class="extra content">
@@ -218,23 +181,17 @@
             <div class="ui fluid card">
               <div class="content">
                 <div class="header">
-                  <a href="https://guarded-waters-2139.herokuapp.com/" target="_blank">
-                    gCamp | Basecamp Clone
-                  </a>
+                  <a href="https://guarded-waters-2139.herokuapp.com/" target="_blank">{{project4_name}}</a>
                 </div>
-                <div class="meta">
-                  Ruby on Rails
-                </div>
+                <div class="meta">{{project4_stack}}</div>
                 <div class="description">
-                  <p>
-                    A simplified version of a project management application.
-                    Create an account, establish a project, add team members
-                    and assign tasks.
-                  </p>
+                  {{#each paragraph in project4_description}}
+                    <p>{{paragraph}}</p>
+                  {{/each}}
                   <div class="ui divider"></div>
-                  <div class="ui label">User Authentication and Authorization</div>
-                  <div class="ui label">Bootstrap</div>
-                  <div class="ui label">Database Association</div>
+                  {{#each tag in project4_tags}}
+                    <div class="ui label">{{tag}}</div>
+                  {{/each}}
                 </div>
               </div>
               <div class="extra content">
@@ -266,6 +223,8 @@
                   <a href="http://www.boredomsimulator.com/" target="_blank">
                     Boredom Simulator
                   </a>
+
+                  {{game1.name}}
                 </div>
                 <div class="meta">
                   JavaScript Game
@@ -286,7 +245,7 @@
                   <i class="user large github icon"></i>
                   Repo
                 </a>
-                <a href="http://globalgamejam.org/2015/games/boredom-simulator" target="_blank">
+                <a href="http://www.boredomsimulator.com/" target="_blank">
                   <i class="user large game icon"></i>
                   Star Game
                 </a>
@@ -340,7 +299,12 @@
       </div>
     </script> <!--Games-->
 
+    <script type="text/x-handlebars" id="game">
+      {{log model}}
+    </script>
+
     <script src="javascripts/app.js" charset="utf-8"></script>
+    <script src="javascripts/controller.js" charset="utf-8"></script>
     <script src="javascripts/router.js" charset="utf-8"></script>
   </body>
 </html>
