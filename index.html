@@ -32,11 +32,11 @@
                 </div>
               </div>
               <div class="extra content">
-                <a href="https://github.com/postazure" target="_blank"><i class="user large github icon"></i></a>
-                <a href="https://twitter.com/postazure" target="_blank"><i class="user large twitter icon"></i></a>
-                <a href="https://www.linkedin.com/in/maxcgordon" target="_blank"><i class="user large linkedin icon"></i></a>
-                <a href="https://medium.com/@Postazure" target="_blank"><i class="user large quote right icon"></i></a>
-                <a href="mailto:gordonmaxc@gmail.com" target="_blank"><i class="large mail icon"></i></a>
+                {{#each link in model}}
+                  <a {{bind-attr href=link.url}} target="_blank">
+                    <i{{bind-attr class=link.iconClass}}></i>
+                  </a>
+                {{/each}}
               </div>
             </div> <!--profile card-->
           </div>
@@ -220,24 +220,17 @@
               </div>
               <div class="content">
                 <div class="header">
-                  <a href="http://www.boredomsimulator.com/" target="_blank">
-                    Boredom Simulator
-                  </a>
-
-                  {{game1.name}}
+                  {{#link-to "game" gameOne}}
+                    {{gameOne.name}}
+                  {{/link-to}}
                 </div>
-                <div class="meta">
-                  JavaScript Game
-                </div>
+                <div class="meta">{{gameOne.subtitle}}</div>
                 <div class="description">
-                  <p>
-                    It's Saturday night, you are waiting for your friends to
-                    come pick you up. Maintain your boredom levels or you might
-                    just fall asleep and miss your friends picking you up.
-                  </p>
+                  <p>{{gameOne.summary}}</p>
                   <div class="ui divider"></div>
-                  <div class="ui label">Vanilla JS</div>
-                  <div class="ui label">jQuery</div>
+                  {{#each tag in gameOne.tags}}
+                    <div class="ui label">{{tag}}</div>
+                  {{/each}}
                 </div>
               </div>
               <div class="extra content">
@@ -266,21 +259,17 @@
               </div>
               <div class="content">
                 <div class="header">
-                  <a href="http://www.downwiththedrones.com/" target="_blank">
-                    Down With The Drones
-                  </a>
+                  {{#link-to "game" gameTwo}}
+                    {{gameTwo.name}}
+                  {{/link-to}}
                 </div>
-                <div class="meta">
-                  JavaScript Game
-                </div>
+                <div class="meta">{{gameTwo.subtitle}}</div>
                 <div class="description">
-                  <p>
-                    Get your swarm of mind controlled followers into their
-                    respective holes. Each wrong step will cost you and all the
-                    while the clock is counting down.
-                  </p>
+                  <p>{{gameTwo.summary}}</p>
                   <div class="ui divider"></div>
-                  <div class="ui label">Impact JS</div>
+                  {{#each tag in gameTwo.tags}}
+                    <div class="ui label">{{tag}}</div>
+                  {{/each}}
                 </div>
               </div>
               <div class="extra content">
@@ -299,9 +288,20 @@
       </div>
     </script> <!--Games-->
 
-    <script type="text/x-handlebars" id="game">
-      {{log model}}
-    </script>
+    <script type="text/x-handlebars" id="game"> <!--Show Game -->
+      <h2>{{model.name}}</h2>
+      <h4>
+        {{model.subtitle}}
+        {{#each tag in model.tags}}
+          | {{tag}}
+        {{/each}}
+      </h4>
+      <p>{{model.description}}</p>
+
+      <div class="ui large image">
+        <img {{bind-attr src=model.screenshot}} alt="" />
+      </div>
+    </script> <!--Show Game -->
 
     <script src="javascripts/app.js" charset="utf-8"></script>
     <script src="javascripts/controller.js" charset="utf-8"></script>

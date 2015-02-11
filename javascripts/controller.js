@@ -85,6 +85,7 @@ App.ProjectsController = Ember.Controller.extend({
 
 });
 
-App.GamesController = Ember.Controller.extend({
-  
+App.GamesController = Ember.ObjectController.extend({
+  gameOne: function(){ return this.get('model').objectAt(0) }.property('games.[]'),
+  gameTwo: function(){ return this.get('model').objectAt(1) }.property('games.[]')
 });
