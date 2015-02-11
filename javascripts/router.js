@@ -5,7 +5,6 @@ App.Router.map(function () {
   this.route("game", {path:"game/:game_id"});
 });
 
-
 App.ApplicationRoute = Ember.Route.extend({
   model: function () {
     return [

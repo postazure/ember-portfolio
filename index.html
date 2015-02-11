@@ -34,7 +34,7 @@
               <div class="extra content">
                 {{#each link in model}}
                   <a {{bind-attr href=link.url}} target="_blank">
-                    <i{{bind-attr class=link.iconClass}}></i>
+                    <i {{bind-attr class=link.iconClass}} ></i>
                   </a>
                 {{/each}}
               </div>
@@ -76,7 +76,6 @@
           {{content_title2}}<div class="sub header">{{content_subtitle2}}</div>
         </h3>
         <div class="ui divider"></div>
-
         <a class="ui blue ribbon label" href="https://www.linkedin.com/in/maxcgordon" target="_blank">
           <i class="ui large linkedin square icon"></i>Linkedin
         </a>

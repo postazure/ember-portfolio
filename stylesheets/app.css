@@ -15,10 +15,6 @@ body {
 .active {
   pointer-events: none;
 }
-/*
-#content-panel {
-  height: 80vh;
-}*/
 
 i.down {
   cursor: pointer;
