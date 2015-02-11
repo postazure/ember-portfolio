@@ -12,7 +12,7 @@ body {
   height: 75vh;
 }
 
-.active.item {
+.active {
   pointer-events: none;
 }
 /*

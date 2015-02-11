@@ -57,22 +57,22 @@
             <div id="outlet">
               <div class="ui piled segment">
                 <div class="ui top pointing fluid three item menu" id="menu-bar">
-                  {{#link-to "index"}}
-                    <a class="item active">
+                  {{#link-to "index" classNames="item"}}
+
                       <i class="user icon"></i> About
-                    </a>
+
                   {{/link-to}}
 
-                  {{#link-to "projects"}}
-                    <a class="item">
+                  {{#link-to "projects" classNames="item"}}
+
                       <i class="folder icon"></i> Projects
-                    </a>
+
                   {{/link-to}}
 
-                  {{#link-to "games"}}
-                    <a class="item">
+                  {{#link-to "games" classNames="video-load item"}}
+
                       <i class="game icon"></i> Games
-                    </a>
+
                   {{/link-to}}
                 </div>
                   {{outlet}}

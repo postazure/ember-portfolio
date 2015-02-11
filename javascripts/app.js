@@ -1,11 +1,9 @@
 window.App = Ember.Application.create();
 $(document).ready(function () {
-    $("#menu-bar").on("click", 'a', function () {
-      $("a.item.active").removeClass("active")
-      var selection = $(this)
-      setTimeout(function(){
-        $('.ui.video').video();
-        selection.addClass("active")
-      }, 10);
-    })
+  $('.ui.video').video();
+  $("#menu-bar").on("click", '.video-load', function () {
+    setTimeout(function(){
+      $('.ui.video').video();
+    }, 10);
+  })
 })
