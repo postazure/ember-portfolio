@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="stylesheets/app.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
+
     <script type="text/x-handlebars" id="application">
       <div id="container">
         <div class="ui grid">
@@ -21,35 +22,21 @@
                 <img src="images/card_Max.jpg">
               </div>
               <div class="content">
-                <a class="header" href="mailto:gordonmaxc@gmail.com" target="_blank">Max Gordon</a>
+                <a class="header" href="mailto:gordonmaxc@gmail.com" target="_blank">{{name}}</a>
                 <a class="ui red ribbon label" href="https://www.linkedin.com/in/maxcgordon" target="_blank">
                   Available April 2015
                 </a>
-                <div class="meta">
-                  <span class="date"></span>
-                </div>
                 <div class="description">
-                  <p>Junior Web Developer</p>
-                  <p>Ruby on Rails & JavaScript</p>
+                  <p>{{position}}</p>
+                  <p>{{tagline}}</p>
                 </div>
               </div>
               <div class="extra content">
-                <a href="https://github.com/postazure" target="_blank">
-                  <i class="user large github icon"></i>
-                </a>
-                <a href="https://twitter.com/postazure" target="_blank">
-                  <i class="user large twitter icon"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/maxcgordon" target="_blank">
-                  <i class="user large linkedin icon"></i>
-                </a>
-                <a href="https://medium.com/@Postazure" target="_blank">
-                  <i class="user large quote right icon"></i>
-                </a>
-                <a href="mailto:gordonmaxc@gmail.com" target="_blank">
-                  <i class="large mail icon"></i>
-
-                </a>
+                <a href="https://github.com/postazure" target="_blank"><i class="user large github icon"></i></a>
+                <a href="https://twitter.com/postazure" target="_blank"><i class="user large twitter icon"></i></a>
+                <a href="https://www.linkedin.com/in/maxcgordon" target="_blank"><i class="user large linkedin icon"></i></a>
+                <a href="https://medium.com/@Postazure" target="_blank"><i class="user large quote right icon"></i></a>
+                <a href="mailto:gordonmaxc@gmail.com" target="_blank"><i class="large mail icon"></i></a>
               </div>
             </div> <!--profile card-->
           </div>
@@ -58,21 +45,15 @@
               <div class="ui piled segment">
                 <div class="ui top pointing fluid three item menu" id="menu-bar">
                   {{#link-to "index" classNames="item"}}
-
-                      <i class="user icon"></i> About
-
+                    <i class="user icon"></i> About
                   {{/link-to}}
 
                   {{#link-to "projects" classNames="item"}}
-
-                      <i class="folder icon"></i> Projects
-
+                    <i class="folder icon"></i> Projects
                   {{/link-to}}
 
                   {{#link-to "games" classNames="video-load item"}}
-
-                      <i class="game icon"></i> Games
-
+                    <i class="game icon"></i> Games
                   {{/link-to}}
                 </div>
                   {{outlet}}
@@ -86,51 +67,28 @@
     <script type="text/x-handlebars" id="index">
       <div id="about-content">
         <div class="ui right floated large image bordered rounded img-caption">
-
           <img src="images/max_group_photo.jpg">
-          <p class="ui bottom right attached label" >
-            Galvanize SF gSchool
-          </p>
+          <p class="ui bottom right attached label" >Galvanize SF gSchool</p>
         </div>
-
-        <h2>What Makes Me Tick</h2>
+        <h2>{{content_header}}</h2>
         <h3 class="ui header">
-          Web Apps
-          <div class="sub header">Ruby on Rails, JavaScript</div>
+          {{content_title1}}<div class="sub header">{{content_subtitle1}}</div>
         </h3>
-        <p>
-        </p>
         <h3 class="ui header">
-          Internet of Things
-          <div class="sub header">Arduino, Raspberry Pi</div>
+          {{content_title2}}<div class="sub header">{{content_subtitle2}}</div>
         </h3>
-        <p>
-        </p>
         <div class="ui divider"></div>
 
-
         <a class="ui blue ribbon label" href="https://www.linkedin.com/in/maxcgordon" target="_blank">
-          <i class="ui large linkedin square icon"></i>
-          Linkedin
+          <i class="ui large linkedin square icon"></i>Linkedin
         </a>
         <h3 class="ui header">
-          Galvanize | gSchool
-          <div class="sub header">Full Stack Developer</div>
+          {{gal_title}}<div class="sub header">{{gal_subtitle}}</div>
         </h3>
-        <p>
-          Full stack curriculum including Ruby on Rails, Sinatra,
-          Javascript, CSS3, HTML5, Responsive Design, Database, APIs,
-          Version Control, and Test Driven Development. Learned how to
-          write maintainable code through test driven development and
-          industry best practices. Deployed and managed a series of
-          cloud-based web applications using Heroku, Divshot and other
-          industry services. Regularly utilized pair programming, version
-          control and agile development.
-        </p>
+        <p>{{gal_desciption}}</p>
         <div class="ui bottom right attached label">
           <a href="https://github.com/postazure/portfolio" target="_blank">
-            <i class="user large github icon"></i>
-            View my Repo for this site
+            <i class="user large github icon"></i>View my Repo for this site
           </a>
         </div>
       </div>
